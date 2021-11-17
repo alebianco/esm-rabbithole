@@ -1,0 +1,22 @@
+{
+  "name": "esm-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "pretest": "tsc --build",
+    "test": "node ./dist/index.js"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "dependencies": {
+    "foo": "file:../foo"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "4.4.4"
+  }
+}
